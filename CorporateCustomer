@@ -1,0 +1,4 @@
+public class CormarateCustomer extends Customer{
+    String companyName;
+    String taxNumber;
+}
