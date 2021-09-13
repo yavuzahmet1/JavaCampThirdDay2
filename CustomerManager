@@ -1,0 +1,19 @@
+public class CustomerManager {//veritabanına yazacağımız iş kodları
+
+    public void add(Customer customer) {//bunun ismi poliformizim
+        System.out.println(customer.customerNumber + "\t: Kaydedildi.");
+    }
+
+    public void addMultiple(Customer[] customers) {//bunun ismi bulk insert(çoklu ekleme)
+        for (Customer customer : customers) {
+            add(customer);//yukarıdaki add clasını çalıştırır
+        }
+    }
+}
+//Customer sınıfını extends eden sınıfları referans alır
+//hem kişisel hemde kurumsal müşteri numarası kaydedildi
+//ekranda;
+//788232    : Kaydedildi
+//123456    : Kaydedildi yazmaktadır.
+
+//SOLID-Open Closed Principle-Sisteme yeni bir özellik eklendiğinde mevcutta bulan hiçbir kodu değiştiremezsiniz.
