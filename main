@@ -1,0 +1,22 @@
+public class Main {
+
+    public static void main(String[] args) {
+        IndividualCustomer engin = new IndividualCustomer();
+        engin.customerNumber = "123456";
+
+        CormarateCustomer hepsiBurada = new CormarateCustomer();
+        hepsiBurada.customerNumber = "788232";
+
+        SendikaCustomer sendikaCustomer = new SendikaCustomer();
+        sendikaCustomer.customerNumber = "000122";
+
+        CustomerManager customerManager = new CustomerManager();
+        /*customerManager.add(hepsiBurada);
+        customerManager.add(engin);
+        customerManager.add(sendikaCustomer);*///bu komentlediğim yeri kısaca ve multiple olarak
+        // aşağıdaki kod satırıyla array kullanarak daha pratik hale getirebiliriz.
+
+        Customer[] customers = {engin, hepsiBurada, sendikaCustomer};
+        customerManager.addMultiple(customers);
+    }
+}
